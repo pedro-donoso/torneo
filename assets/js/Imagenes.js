@@ -13,6 +13,17 @@ document.getElementById("buttonImages").addEventListener("click", async () => {
         .getElementsByClassName(
             "personajes"
         )[0].innerHTML = imagenesPjTemplate;
+
+    document.querySelectorAll(".personajes img").forEach(i => {
+        i.addEventListener("click", (e) => {
+            $("#imagenModal").modal("toggle");
+            const imagenSrc = e.target.src;
+            document.getElementById(
+                "preview"
+            ).style.backgroundImage = `url(${imagenSrc})`;
+    })
+})
+    
 });
 
 
