@@ -23,3 +23,5 @@ class Humano extends Personaje {
     }
 
 }
+
+export { Saijayin, Humano };
