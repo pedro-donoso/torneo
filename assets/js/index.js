@@ -1,4 +1,4 @@
-import { Saijayin, Humano } from "./Razas";
+import { Saijayin, Humano } from "./clases/Razas";
 
 let participantes = []
 document.getElementsByName("btnRegistrar").addEventListener("click", () => {
@@ -30,3 +30,17 @@ document.getElementsByName("btnRegistrar").addEventListener("click", () => {
     console.log(participantes);
 
 });
+
+const reloadTable = () => {
+    const participantesTemplate = document.getElementById("Participantes");
+    participantesTemplate.innerHTML = "";
+    participantes.forEach((p, i) => {
+        participantesTemplate.innerHTML += `
+        
+        <div>
+
+        <div/>
+        
+        `
+    })
+}
