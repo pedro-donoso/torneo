@@ -66,3 +66,20 @@ const reloadTable = () => {
         `;
   });
 };
+
+window.activarHabilidad = (i) => {
+    const participante = participantes[i];
+    if (participante.getRaza() == "Saiyajin") {
+        participante.Transformacion();
+    } else if (participante.getRaza() == "Humano") {
+        participante.Coraje();
+    }
+    reloadTable();
+};
+
+document.getElementById("btnMasFuerte").addEventListener("click", () => {
+    const masFuerte = participantes.sort((a, b) => b.getPoder() - a.getPoder())[0];
+    const nombre = masFuerte.getNombre();
+
+    document.querySelector(`[data-fighter='${nombre}'] div`).style.boxShadow = "0px 0px 5px 1px yellow"
+});
