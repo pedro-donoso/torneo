@@ -1,8 +1,8 @@
-import Personaje from './Personaje';
+import Personaje from './Personaje.js';
 
 class Saijayin extends Personaje {
     constructor(nombre, img, poder, raza) {
-        super(nombre, img, poder, raza)
+        super(nombre, img, poder, raza);
     }
 
     Transformacion() {

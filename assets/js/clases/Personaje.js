@@ -32,7 +32,6 @@ class Personaje {
     set Poder(poder) {
         return this.getPoder(poder);
     }
-
 }
 
 export default Personaje;
