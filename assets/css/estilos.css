@@ -5,17 +5,17 @@
 
 body {
   background: url("../imgs/fondo.jpg");
-  background-position: center;
+  background-position: justify;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 100px;
+  background-repeat: repeat;
+  height: 100%;
+  padding: 2rem;
 }
 
 /* Formulario */
 
 #preview {
-  height: 200px;
+  height: 20rem;
   background: #f0f0f0;
   background-position: top;
   background-size: cover;
@@ -35,16 +35,18 @@ body {
 }
 
 #Participantes div >div:hover {
-  box-shadow: 0px 1px 5px 1px;
+  box-shadow: 0px 1px 10px 1px;
 }
 
 .participante {
-  max-width: 30%;
+  max-width: 50%;
+  padding: 1rem;
 }
 
 /* Modal */
 
 .modal-dialog{
-    max-width: 85% !important;
+    max-width: 30%;
+    text-align: center;
 }
 
