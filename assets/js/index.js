@@ -5,8 +5,8 @@ document.getElementById("btnRegistrar").addEventListener("click", () => {
   let nombre = document.getElementById("nombre");
   let raza = document.getElementById("raza");
   let previewElement = document.getElementById("preview");
-  let ImagenSrcbg = previewElement.style.backgroundImage;
-  let imgSrc = ImagenSrcbg.slice(5, ImagenSrcbg.length - 2);
+  let imagenSrcbg = previewElement.style.backgroundImage;
+  let imgSrc = imagenSrcbg.slice(5, imagenSrcbg.length - 2);
   let ki = document.getElementById("poderPelea");
 
   let nuevoParticipante;
@@ -22,10 +22,26 @@ document.getElementById("btnRegistrar").addEventListener("click", () => {
     nuevoParticipante = new Humano(nombre.value, imgSrc, ki.value, raza.value);
   }
 
-    participantes.push(nuevoParticipante);
-    reloadTable();
 
-});
+    if (raza.value && nombre.value && ki.value && imagenSrcbg) {
+        participantes.push(nuevoParticipante);
+
+        nombre.selectedIndex = 0;
+
+        raza.selectedIndex = 0;
+
+        previewElement.style.backgroundImage = "none";
+
+        imagenSrcbg = previewElement.style.backgroundColor = "#f0f0f0";
+
+        ki.value = "";
+
+        reloadTable();
+
+    } else {
+        alert("Faltan datos por llenar");
+    }
+ });
 
 const reloadTable = () => {
   const participantesTemplate = document.getElementById("Participantes");
