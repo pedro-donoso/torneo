@@ -48,7 +48,7 @@ const reloadTable = () => {
   participantesTemplate.innerHTML = "";
   participantes.forEach((p, i) => {
     participantesTemplate.innerHTML += `
-        <div class="px-3 pb-2 participante" data-fighter="${p.getNombre()}">
+        <div class="px-1 pb-1 participante" data-fighter="${p.getNombre()}">
             <div class="card">
                 <img
                     src="${p.getImg()}"
@@ -56,10 +56,10 @@ const reloadTable = () => {
                     />
                     <div class="card-body">
                     <h4 class="card-title">${p.getNombre()}</h4>
-                    <hr class="w-50 mx-auto ">
+             
                     <h6 class="card-text">Raza: ${p.getRaza()}</h6>
-                    <h6 class="card-text">Poder de pelea: <span class="text-danger"> ${p.getPoder()} </span>
-                    <button class="btn btn-outline-warning" onclick="activarHabilidad('${i}')">Habilidad Especial</button>
+                    <h6 class="card-text">Poder: <span class="text-danger"> ${p.getPoder()} </span>
+                    <button class="btn btn-warning mt-1" onclick="activarHabilidad('${i}')">¡Especial!</button>
                     </div>
                 </div>
             </div>       
@@ -81,5 +81,5 @@ document.getElementById("btnMasFuerte").addEventListener("click", () => {
     const masFuerte = participantes.sort((a, b) => b.getPoder() - a.getPoder())[0];
     const nombre = masFuerte.getNombre();
 
-    document.querySelector(`[data-fighter='${nombre}'] div`).style.boxShadow = "0px 0px 5px 1px yellow"
+    document.querySelector(`[data-fighter='${nombre}'] div`).style.boxShadow = "0px 0px 10px 5px red"
 });

@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="assets/css/estilos.css" />
   </head>
   <body>
+
+
     <div class="row">
-      <div class="card col-12 col-sm-4">
+      <div class="card col-12 col-sm-4 bg-dark text-white text-center">
         <div class="card-body">
-          <h6 class="card-title">Registrar participante:</h6>
+          <h6 class="card-title">Participante:</h6>
           <div class="card-text">
             <div class="form-group">
-              <label for="exampleInputPassword1">Nombre:</label>
               <select class="form-control" id="nombre">
-                <option disabled selected>Escoge un personaje</option>
+                <option disabled selected>Nombre...</option>
                 <option value="Goku">Goku</option>
                 <option value="Gohan">Gohan</option>
                 <option value="Krilin">Krilin</option>
@@ -32,7 +33,7 @@
             <div class="form-group">
               <label for="exampleInputPassword1">Raza:</label>
               <select class="form-control" id="raza">
-                <option disabled selected>Seleccione su raza</option>
+                <option disabled selected>Escoge...</option>
 
                 <option value="Humano">Humano</option>
                 <option value="Saiyajin">Saiyajin</option>
@@ -40,9 +41,8 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleInputPassword1">Seleccione una imagen:</label>
               <button
-                class="btn btn-sm btn-outline-danger"
+                class="btn btn-sm btn-danger"
                 data-toggle="modal"
                 data-target="#imagenesModal"
                 id="buttonImages"
@@ -53,28 +53,29 @@
 
             <div id="preview" class="card"></div>
           </div>
-          <div class="form-group">
+          <div class="form-group mt-3">
             <label for="exampleInputPassword1">Poder (Ki):</label>
             <input class="form-control" id="poderPelea" type="number" />
           </div>
-          <btn class="btn btn-sm btn-outline-primary" id="btnRegistrar">Registrar</btn>
+          <btn class="btn btn-sm btn-primary" id="btnRegistrar">Registrar</btn>
         </div>
       </div>
 
       <div
-        class="card col-5 col-sm-7 text-center mx-1 py-3 bg-light"
+        class="card col-5 col-sm-7 text-center mx-1 py-4 bg-warning"
         id="Tabla"
       >
         <h6>Tabla de Participantes</h6>
-        <button class="btn btn-sm btn-outline-success" id="btnMasFuerte">
+        <button class="btn btn-sm btn-success" id="btnMasFuerte">
           ¿Quién es más fuerte?
         </button>
         <div
           id="Participantes"
-          class="d-flex flex-wrap"
+          class="d-flex flex-wrap mt-3"
         ></div>
       </div>
     </div>
+       </div>
 
     <!-- Modal -->
     <div
@@ -86,12 +87,12 @@
         <div class="modal-content">
           <div class="modal-body d-flex justify-content-center">
             <div class="personajes m-1">
-              No se encontraron imágenes de este personaje
+              No se encontraron imágenes del personaje
             </div>
           </div>
         </div>
       </div>
-    </div>
+ 
    
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
